@@ -39,7 +39,7 @@ const App = () => {
       </h1>
       <div style={{display: 'flex', gap: 3, justifyContent: "space-between"}}>
         <RadialChart data={data}/>
-        <RadialChart2/>
+        {/*<RadialChart2/>*/}
       </div>
     </div>
   );
