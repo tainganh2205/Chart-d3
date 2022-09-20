@@ -37,8 +37,10 @@ const App = () => {
           }
         </select>
       </h1>
-      <RadialChart data={data}/>
-      <RadialChart2/>
+      <div style={{display: 'flex', gap: 3, justifyContent: "space-between"}}>
+        <RadialChart data={data}/>
+        <RadialChart2/>
+      </div>
     </div>
   );
 };

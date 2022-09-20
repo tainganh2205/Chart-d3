@@ -4,8 +4,8 @@ import * as d3 from 'd3'
 import {mean} from 'lodash'
 
 
-const BASE_WIDTH = 400
-const BASE_HEIGHT = 400
+const BASE_WIDTH = 650
+const BASE_HEIGHT = 650
 const NUM_BARS = 25
 const BAR_ANGLE = (2 * Math.PI) / NUM_BARS
 const INNER_RADIUS = 20
