@@ -1,6 +1,6 @@
 import React from 'react';
-import RadialChart from "./visualizations/RadialChart";
-import RadialChart2 from "./visualizations/RaidalChart2";
+import RadialChart from "./chart/RadialChart";
+// import RadialChart2 from "./chart/RaidalChart2";
 
 const App = () => {
   const [temps, setTemps] = React.useState({})
