@@ -1,5 +1,7 @@
 import React from 'react';
 import RadialChart from "./chart/RadialChart";
+import LineChart from "./chart/LineChart";
+import Charts from "./chart/LineChart2";
 // import RadialChart2 from "./chart/RaidalChart2";
 
 const App = () => {
@@ -24,21 +26,32 @@ const App = () => {
   const data = temps[city];
   return (
     <div className="App">
-      <h1>
-        <select name='city' onChange={updateCity}>
-          {
-            [
-              {label: 'San Francisco', value: 'sf'},
-              {label: 'New York', value: 'ny'},
-              {label: 'Amsterdam', value: 'am'},
-            ].map(option => {
-              return (<option key={option.value} value={option.value}>{option.label}</option>);
-            })
-          }
-        </select>
-      </h1>
-      <div style={{display: 'flex', gap: 3, justifyContent: "space-between"}}>
-        <RadialChart data={data}/>
+      <div style={{display: 'flex', flexDirection: 'column', gap: 3, justifyContent: "space-between"}}>
+        <div>
+          <h1>Line Chart</h1>
+          <Charts/>
+        </div>
+
+        <div>
+          <h1>Radial Chart</h1>
+          <div className="select">
+            <select name='city' onChange={updateCity}>
+              {
+                [
+                  {label: 'San Francisco', value: 'sf'},
+                  {label: 'New York', value: 'ny'},
+                  {label: 'Amsterdam', value: 'am'},
+                ].map(option => {
+                  return (<option key={option.value} value={option.value}>{option.label}</option>);
+                })
+              }
+            </select>
+
+          </div>
+          <RadialChart data={data}/>
+        </div>
+
+        {/*<LineChart/>*/}
         {/*<RadialChart2/>*/}
       </div>
     </div>

@@ -1,25 +1,154 @@
 body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Libre Baskerville', serif;
+    margin: 0;
+    padding: 0;
+    font-family: 'Libre Baskerville', serif;
 }
 
 select, option {
-  font-family: 'Libre Baskerville', serif;
+    font-family: 'Libre Baskerville', serif;
 }
 
-select {
-  font-size: 32px;
-  margin-left: 12px;
+.wrapper {
+    font-size: 16px;
+    color: #666;
+    padding: 25px;
 }
 
 svg {
-  border: 1px solid #666;
-  margin: 5px;
-  vertical-align: top;
+    overflow: visible;
+}
+
+text {
+    fill: gainsboro;
+    color: gainsboro;
+    font-size: 16px;
+}
+
+.subtitle text {
+    text-decoration: underline;
+    font-size: 12px;
+}
+
+.axis .domain,
+.axis.xAxis line {
+    display: none;
+}
+
+select {
+    font-size: 20px;
+}
+
+svg {
+    border: 1px solid #666;
+    margin: 5px;
+    vertical-align: top;
 }
 
 svg text {
-  font-family: sans-serif;
-  font-size: 10px;
+    font-family: sans-serif;
+    font-size: 10px;
+}
+
+.lineChart {
+    width: 50%;
+    float: left;
+    background: rgba(0, 0, 0, 0.7);
+}
+
+.barChart {
+    width: 50%;
+    float: left;
+    background: rgb(149 218 137 / 90%);
+}
+
+.lineChart .axisLeft line {
+    stroke-width: 0.5;
+    stroke: rgba(255, 255, 255, 0.2);
+}
+
+.lineChart .axisLeft path {
+    display: none;
+}
+
+.lineChart .axisBottom line, .lineChart .axisBottom path {
+    display: none;
+}
+
+.lineChart text {
+    fill: white;
+}
+
+.barChart .axisLeft line {
+    stroke-width: 0.5;
+    stroke: rgba(0, 0, 0, 0.5);
+}
+
+.barChart .axisLeft path {
+    display: none;
+}
+
+.barChart .axisBottom line, .barChart .axisBottom path {
+    display: none;
+}
+
+.barChart text {
+    fill: black;
+}
+
+.area {
+    fill: url(#area-gradient);
+}
+
+.rectOverlayBarChart {
+    fill: rgba(0, 0, 0, 0.1);
+}
+
+.rectOverlayLineChart {
+    fill: rgba(255, 255, 255, 0.1);
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    appearance: none;
+    outline: 0;
+    box-shadow: none;
+    border: 0 !important;
+    background: rgb(149 218 137 / 90%);
+}
+
+.select {
+    position: relative;
+    display: flex;
+    width: 20em;
+    height: 3em;
+    line-height: 3;
+    background: #fff;
+    overflow: hidden;
+    border-radius: .25em;
+}
+select {
+    flex: 1;
+    padding: 0 .5em;
+    color: #fff;
+    cursor: pointer;
+}
+.select::after {
+    content: '\25BC';
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 1em;
+    background: rgba(112, 215, 96, 0.9);
+    cursor: pointer;
+    pointer-events: none;
+    -webkit-transition: .25s all ease;
+    -o-transition: .25s all ease;
+    transition: .25s all ease;
+    color: white;
+}
+/* Transition */
+.select:hover::after {
+    color: Gainsboro;
 }
